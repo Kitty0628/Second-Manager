@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Read Your Square Sales Reports (A Coffee Shop Owner's Guide) | Second Manager</title>
+<meta name="description" content="Your Square dashboard is full of numbers you never open. Here's which Square reports actually matter for a coffee shop, what each one tells you, and how to read them in five minutes.">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="how to read square sales reports, square reports coffee shop, square dashboard coffee shop, square sales summary, square item sales report, coffee shop POS reports">
+<link rel="canonical" href="https://www.secondmanager.app/blog/how-to-read-square-sales-reports/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Second Manager">
+<meta property="og:url" content="https://www.secondmanager.app/blog/how-to-read-square-sales-reports/">
+<meta property="og:title" content="How to Read Your Square Sales Reports (A Coffee Shop Owner's Guide)">
+<meta property="og:description" content="Square records everything — but most owners never open the reports. Here's which Square reports matter for a coffee shop and how to read them fast.">
+<meta property="og:image" content="https://www.secondmanager.app/og-image.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Read Your Square Sales Reports (A Coffee Shop Owner's Guide)">
+<meta name="twitter:description" content="Square records everything — but most owners never open the reports. Here's which Square reports matter for a coffee shop and how to read them fast.">
+<meta name="twitter:image" content="https://www.secondmanager.app/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1A1814; --ink-mid:#5C5850; --ink-light:#9C968C;
+    --paper:#F7F4EE; --paper-mid:#EDE9E1; --rule:#D8D2C8;
+    --espresso:#2C1A0E; --accent:#8B4513;
+    --serif:'DM Serif Display',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif; --mono:'DM Mono',monospace;
+  }
+  body { font-family:var(--sans); color:var(--ink); background:var(--paper); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .container { max-width:720px; margin:0 auto; padding:0 1.5rem; }
+
+  nav { display:flex; align-items:center; justify-content:space-between; max-width:1080px; margin:0 auto; padding:1.5rem; }
+  .nav-logo { font-family:var(--serif); font-size:1.35rem; color:var(--espresso); text-decoration:none; }
+  .nav-right { display:flex; align-items:center; gap:1.25rem; }
+  .nav-pill { font-family:var(--mono); font-size:0.72rem; letter-spacing:0.03em; color:var(--accent); background:var(--paper-mid); padding:0.3rem 0.7rem; border-radius:999px; }
+  .nav-link { font-size:0.9rem; font-weight:500; color:var(--ink-mid); text-decoration:none; transition:color 0.15s; }
+  .nav-link:hover { color:var(--espresso); }
+
+  article { padding:2rem 0 4rem; }
+  .eyebrow { font-family:var(--mono); font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+  h1 { font-family:var(--serif); font-size:clamp(2rem,5vw,2.9rem); line-height:1.1; color:var(--espresso); margin-bottom:1.1rem; }
+  .dek { font-size:1.15rem; color:var(--ink-mid); line-height:1.6; margin-bottom:1.5rem; }
+  .byline { font-family:var(--mono); font-size:0.8rem; color:var(--ink-light); padding-bottom:1.75rem; margin-bottom:2.25rem; border-bottom:1px solid var(--rule); }
+
+  article h2 { font-family:var(--serif); font-size:1.6rem; color:var(--espresso); margin:2.75rem 0 1rem; line-height:1.2; }
+  article h3 { font-family:var(--sans); font-weight:500; font-size:1.15rem; color:var(--espresso); margin:1.75rem 0 0.6rem; }
+  article p { color:var(--ink); font-size:1.05rem; line-height:1.75; margin-bottom:1.2rem; }
+  article p.muted { color:var(--ink-mid); }
+  article ul { margin:0 0 1.4rem 1.2rem; }
+  article li { color:var(--ink); font-size:1.05rem; line-height:1.7; margin-bottom:0.6rem; }
+  article strong { color:var(--espresso); }
+  article a { color:var(--accent); text-decoration:underline; }
+
+  .pull { font-family:var(--serif); font-size:1.5rem; line-height:1.35; color:var(--espresso); border-left:3px solid var(--accent); padding:0.4rem 0 0.4rem 1.4rem; margin:2.25rem 0; }
+
+  .keybox { background:var(--paper-mid); border-radius:12px; padding:1.5rem 1.6rem; margin:1.8rem 0; }
+  .keybox p { margin:0; font-size:1.05rem; line-height:1.7; }
+  .keybox strong { color:var(--espresso); }
+
+  .cta-box { background:var(--espresso); color:#F0E9E1; border-radius:14px; padding:2.25rem 2rem; margin:3rem 0 1rem; text-align:center; }
+  .cta-box h3 { font-family:var(--serif); font-weight:400; color:#FBF7F1; font-size:1.5rem; margin-bottom:0.7rem; }
+  .cta-box p { color:#CDBFB2; font-size:1rem; line-height:1.6; margin-bottom:1.5rem; }
+  .btn-primary { display:inline-block; background:var(--accent); color:#fff; font-family:var(--sans); font-weight:500; font-size:0.98rem; padding:0.85rem 1.6rem; border-radius:8px; text-decoration:none; transition:transform 0.12s,background 0.15s; }
+  .btn-primary:hover { background:#A0561C; transform:translateY(-1px); }
+  .cta-note { font-family:var(--mono); font-size:0.75rem; color:#A38C78; margin-top:0.9rem; }
+
+  .faq { margin-top:3rem; border-top:1px solid var(--rule); }
+  .faq h2 { margin-bottom:0.5rem; }
+  details { border-bottom:1px solid var(--rule); padding:1.15rem 0; }
+  summary { font-family:var(--serif); font-size:1.15rem; color:var(--espresso); cursor:pointer; list-style:none; }
+  summary::-webkit-details-marker { display:none; }
+  details p { color:var(--ink-mid); margin:0.8rem 0 0; }
+
+  footer { max-width:1080px; margin:0 auto; padding:2rem 1.5rem 3rem; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--rule); flex-wrap:wrap; gap:0.75rem; }
+  .footer-logo { font-family:var(--serif); color:var(--espresso); }
+  .footer-copy { font-family:var(--mono); font-size:0.75rem; color:var(--ink-light); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Second Manager</a>
+  <div class="nav-right">
+    <span class="nav-pill">Early access open</span>
+    <a class="nav-link" href="/blog/">Blog</a>
+    <a class="nav-link" href="https://app.secondmanager.app">Log in</a>
+  </div>
+</nav>
+
+<article>
+  <div class="container">
+    <p class="eyebrow">Coffee shop economics</p>
+    <h1>How to Read Your Square Sales Reports (A Coffee Shop Owner's Guide)</h1>
+    <p class="dek">Square quietly records everything that happens in your shop. The problem isn't missing data — it's that the dashboard is overwhelming, and most owners never open the reports that actually matter. Here's a plain-English guide to the Square reports worth your five minutes a week.</p>
+    <p class="byline">Second Manager · 7 min read</p>
+
+    <p>If you run your coffee shop on Square, you are sitting on a goldmine of data you almost certainly aren't using. Every espresso, every muffin, every card tap is logged. But open the Square Dashboard and you're met with a wall of reports, charts, and filters — so most owners glance at today's sales total and close the tab. The good news: you don't need most of it. A handful of Square reports, read the right way, tell you almost everything about how your shop is doing.</p>
+
+    <div class="keybox">
+      <p><strong>Where to find them:</strong> log into your Square Dashboard (on a computer, not just the register app) and open the <strong>Reports</strong> section. Most reports let you set a date range and export to CSV — which is exactly the format you'll want if you ever feed them into a tool that reads them for you.</p>
+    </div>
+
+    <h2>1. Sales Summary — your top-line health</h2>
+    <p>This is the report to start with every week. It shows your <strong>gross sales, net sales, transaction count, and average sale</strong> over the period you choose. Set it to last week and compare it to the week before. Three things to actually look at: is revenue trending up, flat, or down; how many transactions you had (your real customer traffic); and your average sale. Don't just read the revenue number — a flat total can hide a falling customer count masked by a higher average ticket.</p>
+
+    <h2>2. Item Sales — what's actually selling</h2>
+    <p>Item Sales breaks revenue down by product. This is where your <strong>product mix</strong> lives — how much comes from specialty drinks versus drip, how much from food, what your best and worst sellers are. Not every dollar is equally profitable, so a shop doing big volume on low-margin items is working harder for the same money. Scan for two things: which items drive the most revenue, and whether your higher-margin items (food, specialty drinks) are pulling their weight.</p>
+
+    <h2>3. Sales by Hour (or Sales Trends) — your daypart patterns</h2>
+    <p>This is the most underused report of all. It shows when your money actually comes in across the day and week. Your morning rush might carry the whole operation while certain afternoon hours barely cover the staff running them. Reading sales by hour — ideally next to your labor — is how you spot the hours you're overstaffed and the ones you're leaving money on the table.</p>
+
+    <h2>4. Team / Timecard reports — the labor picture</h2>
+    <p>If you run scheduling or payroll through Square, your team reports give you the staff hours you paid. Put those hours next to your Sales by Hour, and you can see your <strong>labor cost as a percentage of revenue</strong> — the single biggest cost most owners can control. A healthy target for many independents is somewhere around 30–35% of revenue, but the average hides the truth; the real insight is labor by daypart.</p>
+
+    <h2>5. Discounts and Comps — the quiet leaks</h2>
+    <p>Discounts, comps, and voids rarely show up as one scary number, so they go unwatched. But loyalty rewards, friends-and-family freebies, and remakes add up. A quick look at your discounts report tells you how much revenue is walking out the door in ways you may have stopped noticing.</p>
+
+    <p class="pull">Square isn't missing anything. The gap is that nobody has the time each week to open five reports, line them up, and ask the right question.</p>
+
+    <h2>Read them together, not one at a time</h2>
+    <p>The magic isn't in any single report — it's in cross-referencing them. Revenue flat but transactions down means you're leaning on fewer, higher-spending customers. Labor percentage fine overall but ugly on Tuesday afternoons means a scheduling problem the monthly average hid. Item sales strong but average ticket sliding means your mix is drifting toward cheaper items. The story is always in the combination.</p>
+
+    <p>That's also the hard part. Exporting five CSVs and reconciling them by hand at 9pm after close is not going to happen most weeks — which is exactly why the reports pile up unread.</p>
+
+    <div class="cta-box">
+      <h3>Let Square's reports read themselves</h3>
+      <p>Second Manager takes your Square export and does this cross-referencing every week — surfacing the questions worth asking instead of leaving you to dig through five reports. It won't tell you what to do. It makes sure you're looking at the right numbers.</p>
+      <a class="btn-primary" href="https://app.secondmanager.app">Start your free 7-day trial →</a>
+      <p class="cta-note">Built for independent coffee shops · No integration · Just a CSV</p>
+    </div>
+
+    <h2>The five-minute weekly read</h2>
+    <p>If you do nothing else, build this habit: once a week, open your Sales Summary, check revenue trend and transaction count, glance at Item Sales for any big mix shift, and scan Sales by Hour for a daypart that looks off. Five minutes, the same four glances, every week. That consistency — reading the same numbers the same way — is what turns Square from a cash register into an early-warning system.</p>
+
+
+    <div class="faq">
+      <h2>Common questions</h2>
+
+      <details>
+        <summary>Which Square report shows my coffee shop's profit?</summary>
+        <p>No single Square report shows net profit, because Square doesn't know your rent, wages, or ingredient costs. The Sales Summary shows revenue and gross figures; you combine that with your labor (team reports) and your outside costs to understand profit. Square gives you the sales side of the equation, not the full P&L.</p>
+      </details>
+
+      <details>
+        <summary>How do I export Square reports as a CSV?</summary>
+        <p>In the Square Dashboard on a computer, open the report you want, set your date range, and look for an export or download option — most reports export to CSV. That CSV is the file you'd upload to a tool that analyzes it for you.</p>
+      </details>
+
+      <details>
+        <summary>What's the difference between gross and net sales in Square?</summary>
+        <p>Gross sales is the total before discounts, comps, and refunds. Net sales is what's left after those are taken out. Net sales is the more honest figure for how much you actually took in, and the gap between the two is worth watching — a widening gap can mean discounts and comps are creeping up.</p>
+      </details>
+
+      <details>
+        <summary>How often should I check my Square reports?</summary>
+        <p>Weekly is the sweet spot for most independent coffee shops. Daily is noisy and reactive; monthly is often too late to catch a problem while it's small. A short weekly read of the same core reports lets you spot trends early without drowning in data.</p>
+      </details>
+
+    </div>
+
+    <p class="muted" style="margin-top:2.5rem;">More reading: <a href="/blog/coffee-shop-numbers-to-check-weekly/">7 numbers every coffee shop owner should check weekly</a> · <a href="/blog/why-is-my-coffee-shop-busy-but-not-profitable/">Why is my coffee shop busy but not profitable?</a> · <a href="/">See how Second Manager works →</a></p>
+
+  </div>
+</article>
+
+<footer>
+  <span class="footer-logo">Second Manager</span>
+  <span class="footer-copy">Built for independent coffee shop owners · US market · 2026</span>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Read Your Square Sales Reports (A Coffee Shop Owner's Guide)",
+  "description": "Your Square dashboard is full of numbers you never open. Here's which Square reports actually matter for a coffee shop, what each one tells you, and how to read them in five minutes.",
+  "author": {
+    "@type": "Organization",
+    "name": "Second Manager"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Second Manager",
+    "url": "https://www.secondmanager.app/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.secondmanager.app/blog/how-to-read-square-sales-reports/"
+  },
+  "datePublished": "2026-07-16",
+  "dateModified": "2026-07-16"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which Square report shows my coffee shop's profit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No single Square report shows net profit, because Square doesn't know your rent, wages, or ingredient costs. The Sales Summary shows revenue and gross figures; you combine that with your labor reports and outside costs to understand profit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I export Square reports as a CSV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the Square Dashboard on a computer, open the report you want, set your date range, and use the export or download option; most reports export to CSV."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between gross and net sales in Square?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gross sales is the total before discounts, comps, and refunds; net sales is what's left after. Net sales is the more honest figure, and a widening gap between them can mean discounts are creeping up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I check my Square reports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weekly is the sweet spot for most independent coffee shops. Daily is noisy; monthly is often too late. A short weekly read of the same core reports catches problems early."
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
