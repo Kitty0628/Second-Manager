@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Shop Menu Engineering: Design a Menu That Sells Your Best Margins | Second Manager</title>
+<meta name="description" content="Not every drink you sell makes the same money. Menu engineering is how you steer customers toward your most profitable items. Here's how to design a coffee shop menu that grows your margin.">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="coffee shop menu engineering, cafe menu design, coffee shop product mix, most profitable coffee drinks, coffee shop menu strategy, coffee menu profitability">
+<link rel="canonical" href="https://www.secondmanager.app/blog/coffee-shop-menu-engineering/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Second Manager">
+<meta property="og:url" content="https://www.secondmanager.app/blog/coffee-shop-menu-engineering/">
+<meta property="og:title" content="Coffee Shop Menu Engineering: Design a Menu That Sells Your Best Margins">
+<meta property="og:description" content="Not every drink makes the same money. Menu engineering steers customers toward your most profitable items. Here's how to design a café menu that grows margin.">
+<meta property="og:image" content="https://www.secondmanager.app/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coffee Shop Menu Engineering: Design a Menu That Sells Your Best Margins">
+<meta name="twitter:description" content="Not every drink makes the same money. Menu engineering steers customers toward your most profitable items. Here's how to design a café menu that grows margin.">
+<meta name="twitter:image" content="https://www.secondmanager.app/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1A1814; --ink-mid:#5C5850; --ink-light:#9C968C;
+    --paper:#F7F4EE; --paper-mid:#EDE9E1; --rule:#D8D2C8;
+    --espresso:#2C1A0E; --accent:#8B4513;
+    --serif:'DM Serif Display',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif; --mono:'DM Mono',monospace;
+  }
+  body { font-family:var(--sans); color:var(--ink); background:var(--paper); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .container { max-width:720px; margin:0 auto; padding:0 1.5rem; }
+
+  nav { display:flex; align-items:center; justify-content:space-between; max-width:1080px; margin:0 auto; padding:1.5rem; }
+  .nav-logo { font-family:var(--serif); font-size:1.35rem; color:var(--espresso); text-decoration:none; }
+  .nav-right { display:flex; align-items:center; gap:1.25rem; }
+  .nav-pill { font-family:var(--mono); font-size:0.72rem; letter-spacing:0.03em; color:var(--accent); background:var(--paper-mid); padding:0.3rem 0.7rem; border-radius:999px; }
+  .nav-link { font-size:0.9rem; font-weight:500; color:var(--ink-mid); text-decoration:none; transition:color 0.15s; }
+  .nav-link:hover { color:var(--espresso); }
+
+  article { padding:2rem 0 4rem; }
+  .eyebrow { font-family:var(--mono); font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+  h1 { font-family:var(--serif); font-size:clamp(2rem,5vw,2.9rem); line-height:1.1; color:var(--espresso); margin-bottom:1.1rem; }
+  .dek { font-size:1.15rem; color:var(--ink-mid); line-height:1.6; margin-bottom:1.5rem; }
+  .byline { font-family:var(--mono); font-size:0.8rem; color:var(--ink-light); padding-bottom:1.75rem; margin-bottom:2.25rem; border-bottom:1px solid var(--rule); }
+
+  article h2 { font-family:var(--serif); font-size:1.6rem; color:var(--espresso); margin:2.75rem 0 1rem; line-height:1.2; }
+  article h3 { font-family:var(--sans); font-weight:500; font-size:1.15rem; color:var(--espresso); margin:1.75rem 0 0.6rem; }
+  article p { color:var(--ink); font-size:1.05rem; line-height:1.75; margin-bottom:1.2rem; }
+  article p.muted { color:var(--ink-mid); }
+  article ul { margin:0 0 1.4rem 1.2rem; }
+  article li { color:var(--ink); font-size:1.05rem; line-height:1.7; margin-bottom:0.6rem; }
+  article strong { color:var(--espresso); }
+  article a { color:var(--accent); text-decoration:underline; }
+
+  .pull { font-family:var(--serif); font-size:1.5rem; line-height:1.35; color:var(--espresso); border-left:3px solid var(--accent); padding:0.4rem 0 0.4rem 1.4rem; margin:2.25rem 0; }
+
+  .keybox { background:var(--paper-mid); border-radius:12px; padding:1.5rem 1.6rem; margin:1.8rem 0; }
+  .keybox p { margin:0; font-size:1.05rem; line-height:1.7; }
+  .keybox strong { color:var(--espresso); }
+
+  .cta-box { background:var(--espresso); color:#F0E9E1; border-radius:14px; padding:2.25rem 2rem; margin:3rem 0 1rem; text-align:center; }
+  .cta-box h3 { font-family:var(--serif); font-weight:400; color:#FBF7F1; font-size:1.5rem; margin-bottom:0.7rem; }
+  .cta-box p { color:#CDBFB2; font-size:1rem; line-height:1.6; margin-bottom:1.5rem; }
+  .btn-primary { display:inline-block; background:var(--accent); color:#fff; font-family:var(--sans); font-weight:500; font-size:0.98rem; padding:0.85rem 1.6rem; border-radius:8px; text-decoration:none; transition:transform 0.12s,background 0.15s; }
+  .btn-primary:hover { background:#A0561C; transform:translateY(-1px); }
+  .cta-note { font-family:var(--mono); font-size:0.75rem; color:#A38C78; margin-top:0.9rem; }
+
+  .faq { margin-top:3rem; border-top:1px solid var(--rule); }
+  .faq h2 { margin-bottom:0.5rem; }
+  details { border-bottom:1px solid var(--rule); padding:1.15rem 0; }
+  summary { font-family:var(--serif); font-size:1.15rem; color:var(--espresso); cursor:pointer; list-style:none; }
+  summary::-webkit-details-marker { display:none; }
+  details p { color:var(--ink-mid); margin:0.8rem 0 0; }
+
+  footer { max-width:1080px; margin:0 auto; padding:2rem 1.5rem 3rem; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--rule); flex-wrap:wrap; gap:0.75rem; }
+  .footer-logo { font-family:var(--serif); color:var(--espresso); }
+  .footer-copy { font-family:var(--mono); font-size:0.75rem; color:var(--ink-light); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Second Manager</a>
+  <div class="nav-right">
+    <span class="nav-pill">Early access open</span>
+    <a class="nav-link" href="/blog/">Blog</a>
+    <a class="nav-link" href="https://app.secondmanager.app">Log in</a>
+  </div>
+</nav>
+
+<article>
+  <div class="container">
+    <p class="eyebrow">Coffee shop economics</p>
+    <h1>Coffee Shop Menu Engineering: Design a Menu That Sells Your Best Margins</h1>
+    <p class="dek">Two shops with identical sales can keep wildly different amounts of money, because not every drink is equally profitable. Menu engineering is the quiet art of steering customers toward what makes you money. Here's how to design a coffee shop menu that grows your margin without raising a single price.</p>
+    <p class="byline">Second Manager &middot; 7 min read</p>
+
+    <p>Here's a truth that hides in plain sight: <strong>not all your drinks make the same money</strong>. A simple espresso drink has some of the highest margins in your whole shop — its ingredient cost is often just 15&ndash;20% of the retail price. A complicated, low-volume blended drink with five ingredients and three minutes of labor can make a fraction of that. If your menu quietly pushes people toward the low-margin stuff, you're leaving real money on the table.</p>
+
+    <div class="keybox">
+      <p><strong>The core idea:</strong> menu engineering means knowing which items are your <em>profit drivers</em> versus your <em>volume drivers</em>, then designing your menu, layout, and staff prompts to steer more customers toward the profitable ones — and quietly retiring the items that are complex, slow, and barely sell.</p>
+    </div>
+
+    <h2>First, know what's actually profitable</h2>
+    <p>You can't engineer a menu you haven't measured. Look at your item sales alongside rough ingredient and labor cost per drink. You're sorting everything into a simple grid: high-margin and popular (protect and feature these), high-margin but overlooked (promote them), low-margin but popular (fine as traffic, but pair them with something profitable), and low-margin and unpopular (candidates to cut).</p>
+
+    <h2>Feature your profit drivers</h2>
+    <p>What's at the top of the board, what's visually highlighted, what your baristas mention — all of it steers orders before the customer has decided. Give your high-margin espresso drinks and signature items the prime real estate. The goal isn't to hide anything; it's to make the profitable choice the easy, obvious one.</p>
+
+    <p class="pull">A busy menu isn't a profitable one. The best menus quietly sell what makes you money and hide what doesn't.</p>
+
+    <h2>Anchor with something premium</h2>
+    <p>Put one deliberately high-end item on the menu — often a pour over or a signature drink. It reframes everything around it: next to a $6 pour over, your $5 latte reads as the sensible choice. A good anchor lifts what people are willing to pay across the whole board.</p>
+
+    <h2>Bundle to lift the ticket</h2>
+    <p>Pairing a drink with a pastry or food item is one of the highest-leverage moves you have — food is often the most underused margin and average-ticket lever in the shop. A simple, well-priced pairing nudges the ticket up while feeling like value to the customer.</p>
+
+    <h2>Cut the quiet drains</h2>
+    <p>Every menu accumulates items that are complex to make, slow the line, tie up inventory, and barely sell. They cost you in ways that never show up as a line item — training, prep, waste, speed. Periodically retire them. A tighter menu is faster, cheaper to run, and easier to steer.</p>
+
+    <div class="cta-box">
+      <h3>Find your profit drivers and your quiet drains</h3>
+      <p>Second Manager reads your Square export every week and surfaces how your product mix is shifting — which items are carrying your margin and which are quietly dragging it — as questions worth asking, so your menu decisions are grounded in what your data actually shows.</p>
+      <a class="btn-primary" href="https://app.secondmanager.app">Start your free 7-day trial &rarr;</a>
+      <p class="cta-note">Built for independent coffee shops &middot; No integration &middot; Just a CSV</p>
+    </div>
+
+    <h2>The bottom line</h2>
+    <p>Menu engineering is margin you can capture without touching your prices or your traffic. Measure which drinks actually make money, feature the profitable ones, anchor with something premium, bundle food to lift the ticket, and cut the complex items nobody orders. The same customers, ordering slightly differently, is often the easiest margin you'll ever find.</p>
+
+
+    <div class="faq">
+      <h2>Common questions</h2>
+
+      <details>
+        <summary>What is menu engineering for a coffee shop?</summary>
+        <p>Menu engineering is the practice of knowing which items are most profitable versus most popular, then designing your menu, layout, and staff prompts to steer customers toward the profitable ones while retiring items that are complex, slow, and barely sell.</p>
+      </details>
+
+      <details>
+        <summary>What are the most profitable items on a coffee shop menu?</summary>
+        <p>Espresso drinks are typically the most profitable, with ingredient costs often just 15 to 20 percent of the retail price. Complex, low-volume blended drinks and food usually carry higher costs. Featuring your high-margin espresso drinks tends to lift overall profitability.</p>
+      </details>
+
+      <details>
+        <summary>Should I remove slow-selling drinks from my menu?</summary>
+        <p>Often yes, especially if they're complex, slow to make, and tie up inventory while rarely selling. Those items cost you in training, prep, waste, and line speed in ways that never appear as a line item. A tighter menu is faster, cheaper to run, and easier to steer.</p>
+      </details>
+
+      <details>
+        <summary>How does menu design increase profit without raising prices?</summary>
+        <p>By steering the same customers toward higher-margin choices. Featuring profitable espresso drinks, anchoring with a premium item so other drinks read as reasonable, and bundling food to lift the ticket all grow margin from your existing traffic without changing any prices.</p>
+      </details>
+
+    </div>
+
+    <p class="muted" style="margin-top:2.5rem;">More reading: <a href="/blog/how-to-price-coffee-drinks/">How to price coffee drinks</a> &middot; <a href="/blog/coffee-shop-average-ticket/">Raise your average ticket</a> &middot; <a href="/blog/coffee-shop-numbers-to-check-weekly/">7 numbers to check weekly</a> &middot; <a href="/">See how Second Manager works &rarr;</a></p>
+
+  </div>
+</article>
+
+<footer>
+  <span class="footer-logo">Second Manager</span>
+  <span class="footer-copy">Built for independent coffee shop owners · US market · 2026</span>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Coffee Shop Menu Engineering: Design a Menu That Sells Your Best Margins",
+  "description": "Not every drink you sell makes the same money. Menu engineering is how you steer customers toward your most profitable items. Here's how to design a coffee shop menu that grows your margin.",
+  "author": {
+    "@type": "Organization",
+    "name": "Second Manager"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Second Manager",
+    "url": "https://www.secondmanager.app/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.secondmanager.app/blog/coffee-shop-menu-engineering/"
+  },
+  "datePublished": "2026-07-16",
+  "dateModified": "2026-07-16"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is menu engineering for a coffee shop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Menu engineering is knowing which items are most profitable versus most popular, then designing your menu and prompts to steer customers toward the profitable ones and retiring complex, slow, low-selling items."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the most profitable items on a coffee shop menu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Espresso drinks are typically the most profitable, with ingredient costs often just 15 to 20 percent of retail. Complex blended drinks and food carry higher costs, so featuring espresso drinks lifts profitability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I remove slow-selling drinks from my menu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often yes, especially complex, slow drinks that rarely sell. They cost you in training, prep, waste, and line speed. A tighter menu is faster, cheaper to run, and easier to steer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does menu design increase profit without raising prices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By steering the same customers toward higher-margin choices: featuring profitable espresso drinks, anchoring with a premium item, and bundling food to lift the ticket, all without changing prices."
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
