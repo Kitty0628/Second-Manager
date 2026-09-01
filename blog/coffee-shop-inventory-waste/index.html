@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Shop Inventory and Waste: Where Your Margin Quietly Leaks | Second Manager</title>
+<meta name="description" content="Milk spoilage, over-portioning, and expired pastries drain coffee shop profit a little every day. Here's how to get inventory and waste under control before they quietly eat your margin.">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="coffee shop inventory management, coffee shop waste, cafe food cost control, coffee shop cogs, reduce coffee shop waste, coffee shop par levels">
+<link rel="canonical" href="https://www.secondmanager.app/blog/coffee-shop-inventory-waste/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Second Manager">
+<meta property="og:url" content="https://www.secondmanager.app/blog/coffee-shop-inventory-waste/">
+<meta property="og:title" content="Coffee Shop Inventory and Waste: Where Your Margin Quietly Leaks">
+<meta property="og:description" content="Milk spoilage, over-portioning, and expired pastries drain café profit daily. Here's how to get inventory and waste under control before they eat your margin.">
+<meta property="og:image" content="https://www.secondmanager.app/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coffee Shop Inventory and Waste: Where Your Margin Quietly Leaks">
+<meta name="twitter:description" content="Milk spoilage, over-portioning, and expired pastries drain café profit daily. Here's how to get inventory and waste under control before they eat your margin.">
+<meta name="twitter:image" content="https://www.secondmanager.app/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1A1814; --ink-mid:#5C5850; --ink-light:#9C968C;
+    --paper:#F7F4EE; --paper-mid:#EDE9E1; --rule:#D8D2C8;
+    --espresso:#2C1A0E; --accent:#8B4513;
+    --serif:'DM Serif Display',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif; --mono:'DM Mono',monospace;
+  }
+  body { font-family:var(--sans); color:var(--ink); background:var(--paper); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .container { max-width:720px; margin:0 auto; padding:0 1.5rem; }
+
+  nav { display:flex; align-items:center; justify-content:space-between; max-width:1080px; margin:0 auto; padding:1.5rem; }
+  .nav-logo { font-family:var(--serif); font-size:1.35rem; color:var(--espresso); text-decoration:none; }
+  .nav-right { display:flex; align-items:center; gap:1.25rem; }
+  .nav-pill { font-family:var(--mono); font-size:0.72rem; letter-spacing:0.03em; color:var(--accent); background:var(--paper-mid); padding:0.3rem 0.7rem; border-radius:999px; }
+  .nav-link { font-size:0.9rem; font-weight:500; color:var(--ink-mid); text-decoration:none; transition:color 0.15s; }
+  .nav-link:hover { color:var(--espresso); }
+
+  article { padding:2rem 0 4rem; }
+  .eyebrow { font-family:var(--mono); font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+  h1 { font-family:var(--serif); font-size:clamp(2rem,5vw,2.9rem); line-height:1.1; color:var(--espresso); margin-bottom:1.1rem; }
+  .dek { font-size:1.15rem; color:var(--ink-mid); line-height:1.6; margin-bottom:1.5rem; }
+  .byline { font-family:var(--mono); font-size:0.8rem; color:var(--ink-light); padding-bottom:1.75rem; margin-bottom:2.25rem; border-bottom:1px solid var(--rule); }
+
+  article h2 { font-family:var(--serif); font-size:1.6rem; color:var(--espresso); margin:2.75rem 0 1rem; line-height:1.2; }
+  article h3 { font-family:var(--sans); font-weight:500; font-size:1.15rem; color:var(--espresso); margin:1.75rem 0 0.6rem; }
+  article p { color:var(--ink); font-size:1.05rem; line-height:1.75; margin-bottom:1.2rem; }
+  article p.muted { color:var(--ink-mid); }
+  article ul { margin:0 0 1.4rem 1.2rem; }
+  article li { color:var(--ink); font-size:1.05rem; line-height:1.7; margin-bottom:0.6rem; }
+  article strong { color:var(--espresso); }
+  article a { color:var(--accent); text-decoration:underline; }
+
+  .pull { font-family:var(--serif); font-size:1.5rem; line-height:1.35; color:var(--espresso); border-left:3px solid var(--accent); padding:0.4rem 0 0.4rem 1.4rem; margin:2.25rem 0; }
+
+  .keybox { background:var(--paper-mid); border-radius:12px; padding:1.5rem 1.6rem; margin:1.8rem 0; }
+  .keybox p { margin:0; font-size:1.05rem; line-height:1.7; }
+  .keybox strong { color:var(--espresso); }
+
+  .cta-box { background:var(--espresso); color:#F0E9E1; border-radius:14px; padding:2.25rem 2rem; margin:3rem 0 1rem; text-align:center; }
+  .cta-box h3 { font-family:var(--serif); font-weight:400; color:#FBF7F1; font-size:1.5rem; margin-bottom:0.7rem; }
+  .cta-box p { color:#CDBFB2; font-size:1rem; line-height:1.6; margin-bottom:1.5rem; }
+  .btn-primary { display:inline-block; background:var(--accent); color:#fff; font-family:var(--sans); font-weight:500; font-size:0.98rem; padding:0.85rem 1.6rem; border-radius:8px; text-decoration:none; transition:transform 0.12s,background 0.15s; }
+  .btn-primary:hover { background:#A0561C; transform:translateY(-1px); }
+  .cta-note { font-family:var(--mono); font-size:0.75rem; color:#A38C78; margin-top:0.9rem; }
+
+  .faq { margin-top:3rem; border-top:1px solid var(--rule); }
+  .faq h2 { margin-bottom:0.5rem; }
+  details { border-bottom:1px solid var(--rule); padding:1.15rem 0; }
+  summary { font-family:var(--serif); font-size:1.15rem; color:var(--espresso); cursor:pointer; list-style:none; }
+  summary::-webkit-details-marker { display:none; }
+  details p { color:var(--ink-mid); margin:0.8rem 0 0; }
+
+  footer { max-width:1080px; margin:0 auto; padding:2rem 1.5rem 3rem; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--rule); flex-wrap:wrap; gap:0.75rem; }
+  .footer-logo { font-family:var(--serif); color:var(--espresso); }
+  .footer-copy { font-family:var(--mono); font-size:0.75rem; color:var(--ink-light); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Second Manager</a>
+  <div class="nav-right">
+    <span class="nav-pill">Early access open</span>
+    <a class="nav-link" href="/blog/">Blog</a>
+    <a class="nav-link" href="https://app.secondmanager.app">Log in</a>
+  </div>
+</nav>
+
+<article>
+  <div class="container">
+    <p class="eyebrow">Coffee shop economics</p>
+    <h1>Coffee Shop Inventory and Waste: Where Your Margin Quietly Leaks</h1>
+    <p class="dek">It's rarely one big expense that sinks a café's margin — it's a thousand small leaks. Overfilled milk pitchers, expired pastries, an extra pump here, an over-order there. Inventory and waste are the most overlooked drain in the business. Here's how to get them under control.</p>
+    <p class="byline">Second Manager &middot; 7 min read</p>
+
+    <p>Cost of goods — the beans, milk, cups, syrups, and food — typically runs <strong>25&ndash;35% of a coffee shop's revenue</strong>, and it's one of the leakiest buckets there is. The trouble is that the leaks are tiny and constant, so they never trigger alarm. No single day's waste looks like a problem. Across a month, it can be the difference between a healthy margin and a thin one.</p>
+
+    <h2>The over-portioning problem</h2>
+    <p>This is the quiet one. Milk pitchers get overfilled during the rush and the extra goes down the drain. An extra pump of syrup slips in. A barista uses a heavy hand on the matcha. When recipes drift from person to person and shift to shift, your cost of goods creeps up and nobody notices, because it never shows up as a bill — it shows up as a slightly worse margin you can't quite explain.</p>
+
+    <div class="keybox">
+      <p><strong>The fix that costs nothing:</strong> consistent recipes. Standard pours, standard pumps, standard portions, trained the same way for everyone. Recipe consistency is one of the highest-return, lowest-cost margin moves in the shop — it plugs dozens of tiny leaks at once.</p>
+    </div>
+
+    <h2>Spoilage and expiry</h2>
+    <p>Milk that turns before it's used, pastries that don't sell before they're stale, perishables ordered in optimistic quantities. Every one is money you already spent walking straight out as trash. The goal isn't zero waste — it's ordering to your actual demand rather than your hopeful demand, which means knowing your real sales patterns by day and item.</p>
+
+    <p class="pull">It's never one big expense that quietly eats a café's margin. It's a hundred small ones nobody's counting.</p>
+
+    <h2>Par levels and ordering to demand</h2>
+    <p>A par level is simply the amount of each item you want on hand for a given period. Setting sensible pars — grounded in what you actually sell, not gut feel — stops both the over-ordering that causes spoilage and the under-ordering that leaves you scrambling. The better you understand your real demand patterns, the tighter and cheaper your ordering gets.</p>
+
+    <h2>Track the comps and voids too</h2>
+    <p>Waste isn't only physical. Remakes, comps, friends-and-family freebies, and voids are revenue walking out in a different form. They're easy to stop tracking and easy to let creep. A periodic look at your discounts and voids tells you how much is leaking through generosity and error.</p>
+
+    <h2>Watch it, don't just feel it</h2>
+    <p>The reason waste stays a problem is that it's invisible in the daily grind — you feel like things are &quot;about normal&quot; and never check. But your cost of goods as a percentage of revenue is trackable week to week, and a creeping COGS number is your early warning that portioning, ordering, or spoilage has drifted before it becomes a real hole.</p>
+
+    <div class="cta-box">
+      <h3>Catch a creeping cost of goods early</h3>
+      <p>Second Manager reads your Square export every week and helps you watch how your cost patterns and product mix are shifting — surfacing the signs of a creeping cost of goods as questions worth asking, before the small leaks add up.</p>
+      <a class="btn-primary" href="https://app.secondmanager.app">Start your free 7-day trial &rarr;</a>
+      <p class="cta-note">Built for independent coffee shops &middot; No integration &middot; Just a CSV</p>
+    </div>
+
+    <h2>The bottom line</h2>
+    <p>Inventory and waste won't announce themselves — they just quietly shave points off your margin. Standardize your recipes, order to your real demand rather than your hopes, set sensible par levels, keep an eye on comps and voids, and watch your cost of goods as a percentage of revenue. Plug the small leaks and you keep money you were already earning.</p>
+
+
+    <div class="faq">
+      <h2>Common questions</h2>
+
+      <details>
+        <summary>What percentage of revenue should a coffee shop's cost of goods be?</summary>
+        <p>Cost of goods, covering beans, milk, cups, syrups, and food, typically runs around 25 to 35 percent of revenue for a coffee shop. A number creeping above your normal range is an early sign that portioning, ordering, or spoilage has drifted and is eating your margin.</p>
+      </details>
+
+      <details>
+        <summary>How do I reduce waste in my coffee shop?</summary>
+        <p>Start with recipe consistency, such as standard pours, pumps, and portions trained the same way for everyone, which plugs dozens of tiny leaks at once. Then order to your real demand rather than optimistic quantities, set sensible par levels, and keep an eye on comps and voids.</p>
+      </details>
+
+      <details>
+        <summary>What is a par level for a coffee shop?</summary>
+        <p>A par level is the amount of each item you want to keep on hand for a given period. Setting pars based on what you actually sell, rather than gut feel, prevents both the over-ordering that causes spoilage and the under-ordering that leaves you scrambling during service.</p>
+      </details>
+
+      <details>
+        <summary>Why is my coffee shop's food cost so high?</summary>
+        <p>Usually it's a mix of over-portioning during the rush, spoilage from ordering more than you sell, inconsistent recipes across staff, and untracked comps and voids. Each is small on its own, but together they push your cost of goods up in ways that never appear as one obvious expense.</p>
+      </details>
+
+    </div>
+
+    <p class="muted" style="margin-top:2.5rem;">More reading: <a href="/blog/coffee-shop-running-costs/">Where a coffee shop's money actually goes</a> &middot; <a href="/blog/coffee-shop-labor-cost-percentage/">What's a healthy labor cost?</a> &middot; <a href="/blog/coffee-shop-profit-margins/">Coffee shop profit margins</a> &middot; <a href="/">See how Second Manager works &rarr;</a></p>
+
+  </div>
+</article>
+
+<footer>
+  <span class="footer-logo">Second Manager</span>
+  <span class="footer-copy">Built for independent coffee shop owners · US market · 2026</span>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Coffee Shop Inventory and Waste: Where Your Margin Quietly Leaks",
+  "description": "Milk spoilage, over-portioning, and expired pastries drain coffee shop profit a little every day. Here's how to get inventory and waste under control before they quietly eat your margin.",
+  "author": {
+    "@type": "Organization",
+    "name": "Second Manager"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Second Manager",
+    "url": "https://www.secondmanager.app/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.secondmanager.app/blog/coffee-shop-inventory-waste/"
+  },
+  "datePublished": "2026-07-16",
+  "dateModified": "2026-07-16"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What percentage of revenue should a coffee shop's cost of goods be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cost of goods typically runs around 25 to 35 percent of revenue. A number creeping above your normal range signals that portioning, ordering, or spoilage has drifted and is eating margin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I reduce waste in my coffee shop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with recipe consistency: standard pours, pumps, and portions for everyone. Then order to real demand rather than optimistic quantities, set sensible par levels, and watch comps and voids."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a par level for a coffee shop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A par level is the amount of each item you want on hand for a period. Setting pars based on actual sales prevents both over-ordering that causes spoilage and under-ordering that leaves you scrambling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my coffee shop's food cost so high?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually it's over-portioning during the rush, spoilage from over-ordering, inconsistent recipes across staff, and untracked comps and voids. Each is small alone but together they push cost of goods up."
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
